@@ -16,10 +16,12 @@ int main (int argc, char **argv){
       printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-j")){
-      //kryptoanaliza z tekstem jawnym cezarem
+      caesarDecryptHelp();
+      printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-k")){
-      //kryptoanaliza w oparciu o kryptogram cezarem
+      caesarDecryptBreak();
+      printf("Check decrypt.txt for text.\n");
     }
     /////////////////
     //Affine section
