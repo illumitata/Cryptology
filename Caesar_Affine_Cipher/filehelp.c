@@ -14,6 +14,8 @@ int readKey(char *filename, short int position){
 
   fscanf(file, "%d %d %d", &k, &a, &b);
 
+  fclose(file);
+
   switch (position) {
     case 1:
       return k;
@@ -28,7 +30,6 @@ int readKey(char *filename, short int position){
       printf("Error.\n");
       break;
   }
-
 }
 
 //Reading whole text file into one buffer
@@ -72,8 +73,9 @@ void saveFile(char *filename, char *result){
 
   if(save){
     fputs  (result, save);
-    fclose (save);
   }
+
+  fclose (save);
 
   return;
 }
