@@ -10,4 +10,10 @@
 
 void caesarEncrypt();
 
+void caesarDecrypt();
+
+void caesarDecryptHelp();
+
+void caesarDecryptBreak();
+
 #endif
