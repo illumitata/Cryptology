@@ -1,4 +1,5 @@
-#Caesar and Affine Ciphers#
+Caesar and Affine Ciphers
+========
 
 Program uses [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) and [Affine cipher](https://en.wikipedia.org/wiki/Affine_cipher) to encrypt and decrypt given text file.
 
