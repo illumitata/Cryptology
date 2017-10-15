@@ -1,10 +1,9 @@
-Caesar and Affine Ciphers
-========
+# Caesar and Affine Ciphers
 
 Program uses [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) and [Affine cipher](https://en.wikipedia.org/wiki/Affine_cipher) to encrypt and decrypt given text file.
 
-Running program
---------
+## Running program
+
 Type in the command line and run the program:
 ```
 ./cezar -arg1 -arg2
@@ -28,11 +27,11 @@ And to get rid of object files type:
 make clean
 ```
 
-Editing keys and text
---------
+## Editing keys and text
+
 Content of **files** folder provides:
 
-###### key.txt
+#### key.txt
 ```
 k a b
 ```
@@ -40,14 +39,14 @@ Where:
 * **k** is the key for caesar cipher (must be an integer from 1 to 25)
 * **a** and **b** are variables which combine for affine cipher key (where gcd(a,26)=1 and a*a'=1 (mod 26))
 
-##### plain.txt
+#### plain.txt
 The file with cleartext.
 
-##### crypto.txt
+#### crypto.txt
 The file where an encrypt result will be saved.
 
-##### decrypt.txt
+#### decrypt.txt
 The file where decrypting result will be saved.
 
-##### extra.txt
+#### extra.txt
 The file which stores additional help-cleartext.
