@@ -65,7 +65,7 @@ char* readFile(char *filename){
   return buffer;
 }
 
-//Saving result in the file
+//Saving result in the file (overwriting it!)
 void saveFile(char *filename, char *result){
 
   FILE *save = fopen(filename, "w+");

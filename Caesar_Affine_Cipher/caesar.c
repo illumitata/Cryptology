@@ -28,12 +28,13 @@ void caesarEncrypt(){
 
   while(((char)*(input+i)) != '\0'){
     if(((char)*(input+i)>='A' && (char)*(input+i)<='Z')){
-      *(code+i) = 65 + ((*(input+i) + key) % ALPHABET);
-      printf("%c\n", *(code+i));
+      *(code+i) = 'A' + ((*(input+i) + key) % ALPHABET);
+    }
+    else if(((char)*(input+i)>='a' && (char)*(input+i)<='z')){
+      *(code+i) = 'a' + ((*(input+i) + key) % ALPHABET);
     }
     else{
       *(code+i) = *(input+i);
-      printf("%c\n", *(code+i));
     }
     i++;
   }
