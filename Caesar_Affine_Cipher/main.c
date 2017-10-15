@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "caesar.h"
+
 int main (int argc, char **argv){
 
   if(!strcmp(argv[1], "-c") || !strcmp(argv[1], "-a")){
     //Ceaser section
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-e")){
-      //szyfrowanie cezarem
+      caesarEncrypt();
+      printf("Check crypto.txt for text.\n");
     }
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-d")){
       //odszyfrowanie cezarem
