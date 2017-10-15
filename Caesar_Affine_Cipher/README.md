@@ -8,7 +8,6 @@ Type in the command line and run the program:
 ```
 ./cezar -arg1 -arg2
 ```
-
 Where:
 * **arg1** stands for method you want to use
   * **-c** for caesar cipher
@@ -18,6 +17,15 @@ Where:
   * **-d** decrypting it
   * **-j** cryptanalysis with cleartext
   * **-k** cryptanalysis without cleartext, gives all possible candidatures
+
+For compilation run simple *Makefile*, just type:
+```
+make
+```
+And to get rid of object files type:
+```
+make clean
+```
 
 ###Editing keys and text
 

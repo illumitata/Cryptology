@@ -1,13 +1,12 @@
-#ifndef CAESAR_H
-#define CAESAR_H
+#ifndef FILEHELP_H
+#define FILEHELP_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "caesar.h"
 #include "filehelp.h"
 
-void caesarEncrypt();
+char* readFile(char *filename);
 
 #endif
