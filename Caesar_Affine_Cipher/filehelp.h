@@ -7,6 +7,10 @@
 
 #include "filehelp.h"
 
+int readKey(char *filename, short int position);
+
 char* readFile(char *filename);
+
+void saveFile(char *filename, char *result);
 
 #endif

@@ -4,6 +4,34 @@
 
 #include "filehelp.h"
 
+//Reading key to an integer variable
+//for caesar key position equals 1 etc. more in README.md
+int readKey(char *filename, short int position){
+
+  int key;
+  int k, a, b;
+  FILE *file = fopen(filename, "r");
+
+  fscanf(file, "%d %d %d", &k, &a, &b);
+
+  switch (position) {
+    case 1:
+      return k;
+      break;
+    case 2:
+      return a;
+      break;
+    case 3:
+      return b;
+      break;
+    default:
+      printf("Error.\n");
+      break;
+  }
+
+}
+
+//Reading whole text file into one buffer
 char* readFile(char *filename){
 
    char *buffer = NULL;
@@ -35,4 +63,17 @@ char* readFile(char *filename){
     }
 
   return buffer;
+}
+
+//Saving result in the file
+void saveFile(char *filename, char *result){
+
+  FILE *save = fopen(filename, "w+");
+
+  if(save){
+    fputs  (result, save);
+    fclose (save);
+  }
+
+  return;
 }
