@@ -21,11 +21,8 @@ void caesarEncrypt(){
   input = readFile(filetext);
   key   = readKey(filekey, 1);
 
-  free(filetext);
-  free(filekey);
-
     sizeInput = strlen(input);
-    code = (char*)malloc(sizeof(4 * sizeInput));
+    code = (char*)calloc(sizeInput, 4);
 
     int i = 0;
 
@@ -45,9 +42,6 @@ void caesarEncrypt(){
     *(code+i+1) = '\0';
 
     saveFile(filesave, code);
-
-  free(input);
-  free(code);
 
   return;
 }
