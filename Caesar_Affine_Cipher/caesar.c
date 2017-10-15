@@ -28,10 +28,10 @@ void caesarEncrypt(){
 
   while(((char)*(input+i)) != '\0'){
     if(((char)*(input+i)>='A' && (char)*(input+i)<='Z')){
-      *(code+i) = 'A' + ((*(input+i) + key) % ALPHABET);
+      *(code+i) = ((*(input+i) - 'A' + key) % ALPHABET) + 'A';
     }
     else if(((char)*(input+i)>='a' && (char)*(input+i)<='z')){
-      *(code+i) = 'a' + ((*(input+i) + key) % ALPHABET);
+      *(code+i) = ((*(input+i) - 'a' + key) % ALPHABET) + 'a';
     }
     else{
       *(code+i) = *(input+i);
@@ -64,13 +64,14 @@ void caesarDecrypt(){
   output = (char*)calloc(sizeInput, 4);
 
   int i = 0;
+  int tmp;
 
   while(((char)*(input+i)) != '\0'){
     if(((char)*(input+i)>='A' && (char)*(input+i)<='Z')){
-      *(output+i) = 'A' + ((*(input+i) - key) % ALPHABET);
+      *(output+i) = (((*(input+i) - 'A') - key + ALPHABET) % ALPHABET) + 'A';
     }
     else if(((char)*(input+i)>='a' && (char)*(input+i)<='z')){
-      *(output+i) = 'a' + ((*(input+i) - key) % ALPHABET);
+      *(output+i) = (((*(input+i) - 'a') - key + ALPHABET) % ALPHABET) + 'a';
     }
     else{
       *(output+i) = *(input+i);
