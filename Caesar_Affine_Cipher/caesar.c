@@ -21,27 +21,33 @@ void caesarEncrypt(){
   input = readFile(filetext);
   key   = readKey(filekey, 1);
 
-  sizeInput = strlen(input);
-  code = (char*) malloc(sizeof(4 * sizeInput));
+  free(filetext);
+  free(filekey);
 
-  int i = 0;
+    sizeInput = strlen(input);
+    code = (char*)malloc(sizeof(4 * sizeInput));
 
-  while(((char)*(input+i)) != '\0'){
-    if(((char)*(input+i)>='A' && (char)*(input+i)<='Z')){
-      *(code+i) = 'A' + ((*(input+i) + key) % ALPHABET);
+    int i = 0;
+
+    while(((char)*(input+i)) != '\0'){
+      if(((char)*(input+i)>='A' && (char)*(input+i)<='Z')){
+        *(code+i) = 'A' + ((*(input+i) + key) % ALPHABET);
+      }
+      else if(((char)*(input+i)>='a' && (char)*(input+i)<='z')){
+        *(code+i) = 'a' + ((*(input+i) + key) % ALPHABET);
+      }
+      else{
+        *(code+i) = *(input+i);
+      }
+      i++;
     }
-    else if(((char)*(input+i)>='a' && (char)*(input+i)<='z')){
-      *(code+i) = 'a' + ((*(input+i) + key) % ALPHABET);
-    }
-    else{
-      *(code+i) = *(input+i);
-    }
-    i++;
-  }
 
-  *(code+i+1) = '\0';
+    *(code+i+1) = '\0';
 
-  saveFile(filesave, code);
+    saveFile(filesave, code);
+
+  free(input);
+  free(code);
 
   return;
 }
