@@ -10,4 +10,6 @@
 
 void caesarEncrypt();
 
+void caesarDecrypt();
+
 #endif

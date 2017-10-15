@@ -12,7 +12,8 @@ int main (int argc, char **argv){
       printf("Check crypto.txt for text.\n");
     }
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-d")){
-      //odszyfrowanie cezarem
+      caesarDecrypt();
+      printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-c") && !strcmp(argv[2], "-j")){
       //kryptoanaliza z tekstem jawnym cezarem
