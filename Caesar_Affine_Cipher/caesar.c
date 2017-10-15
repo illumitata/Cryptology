@@ -144,7 +144,7 @@ void caesarDecryptBreak(){
 
   char *input;
   char *output;
-  int  key, keytmp, sizeInput;
+  int  key, sizeInput;
 
   char *filetext = "files/crypto.txt";
   char *filesave = "files/decrypt.txt";
@@ -157,7 +157,7 @@ void caesarDecryptBreak(){
   int i = 0;
   int j = 0;
 
-  for(int key=1; key<=25; key++){
+  for(key=1; key<=25; key++){
 
     i = 0; //"rewind" the input
 
