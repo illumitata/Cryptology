@@ -40,7 +40,7 @@ void caesarEncrypt(){
     }
 
     *(code+i+1) = '\0';
-
+  
     saveFile(filesave, code);
 
   return;
