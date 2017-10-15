@@ -18,3 +18,27 @@ Where:
   * **-d** decrypting it
   * **-j** cryptanalysis with cleartext
   * **-k** cryptanalysis without cleartext, gives all possible candidatures
+
+###Editing keys and text
+
+Content of **files** folder provides:
+
+######key.txt
+```
+k a b
+```
+Where:
+* **k** is the key for caesar cipher (must be an integer from 1 to 25)
+* **a** and **b** are variables which combine for affine cipher key (where gcd(a,26)=1 and a*a'=1 (mod 26))
+
+#####plain.txt
+The file with cleartext.
+
+#####crypto.txt
+The file where an encrypt result will be saved.
+
+#####decrypt.txt
+The file where decrypting result will be saved.
+
+#####extra.txt
+The file which stores additional help-cleartext.
