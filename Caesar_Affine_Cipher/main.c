@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "caesar.h"
+#include "affine.h"
 
 int main (int argc, char **argv){
 
@@ -26,7 +27,7 @@ int main (int argc, char **argv){
     /////////////////
     //Affine section
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-e")){
-      //szyfrowanie afinicznym
+      affineEncrypt();
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-d")){
       //odszyfrowanie afinicznym

@@ -4,6 +4,60 @@
 
 #include "filehelp.h"
 
+#define ALPHABET 26
+
+//Greatest common divison
+int gcd(int a, int b){
+
+    int temp;
+    while (b != 0){
+        temp = a % b;
+
+        a = b;
+        b = temp;
+    }
+    return a;
+}
+
+//Algorithm returns opposite of a => a' in modulo
+int oppositeModulo(int a, int b){
+
+  int u, w, x, z, q;
+
+  u = 1;
+  w = a;
+  x = 0;
+  z = b;
+
+  while(w){
+    if(w<z){
+      q = u;
+      u = x;
+      x = q;
+      q = w;
+      w = z;
+      z = q;
+    }
+    q = w / z;
+    u -= q * x;
+    w -= q * z;
+  }
+
+  if(z==1){
+    if(x<0) x+=b;
+    return x;
+  }
+  else return 0;
+}
+
+//Checking conditions for affine key
+int checkConditions(int a){
+
+  if((gcd(a, ALPHABET) != 1) || ((a*(oppositeModulo(a, ALPHABET))%ALPHABET)!=1)) \
+  return 1;
+  else return 0;
+}
+
 //Reading key to an integer variable
 //for caesar key position equals 1 etc. more in README.md
 int readKey(char *filename, short int position){
@@ -16,12 +70,13 @@ int readKey(char *filename, short int position){
 
   fclose(file);
 
-  switch (position) {
+  switch (position){
     case 1:
       if(k>25 || k<1) printf("Wrong key!\n");
       return k;
       break;
     case 2:
+      if(checkConditions(a)) printf("Wrong key!\n");
       return a;
       break;
     case 3:

@@ -108,8 +108,10 @@ void caesarDecryptHelp(){
   int k = 0;
 
   while(*(inputHelp+k) != '\0'){
-    keytmp = (*(input+k) - *(inputHelp+k)) % ALPHABET;
-    if(key==keytmp){
+    if((*(inputHelp+k)>='A' && *(inputHelp+k)<='Z') || \
+       (*(inputHelp+k)>='a' && *(inputHelp+k)<='z')){
+
+      key = (*(input+k) - *(inputHelp+k)) % ALPHABET;
 
       while(*(input+i) != '\0'){
         if(*(input+i)>='A' && *(input+i)<='Z'){
@@ -130,10 +132,7 @@ void caesarDecryptHelp(){
 
       break;
     }
-    else{
-      key = keytmp;
-      k++;
-    }
+    else k++;
   }
 
   return;
