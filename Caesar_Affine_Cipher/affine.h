@@ -10,7 +10,7 @@
 
 void affineEncrypt();
 
-//void affineDecrypt();
+void affineDecrypt();
 
 //void affineDecryptHelp();
 

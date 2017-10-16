@@ -76,7 +76,8 @@ int readKey(char *filename, short int position){
       return k;
       break;
     case 2:
-      if(checkConditions(a)) printf("Wrong key!\n");
+      if(checkConditions(a)) printf("Wrong 'a' key!\n");
+      if(b>25 || b<1) printf("Wrong 'b' key!\n");
       return a;
       break;
     case 3:
