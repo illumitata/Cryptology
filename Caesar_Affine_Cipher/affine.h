@@ -12,7 +12,7 @@ void affineEncrypt();
 
 void affineDecrypt();
 
-//void affineDecryptHelp();
+void affineDecryptHelp();
 
 //void affineDecryptBreak();
 

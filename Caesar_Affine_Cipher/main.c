@@ -33,7 +33,7 @@ int main (int argc, char **argv){
       affineDecrypt();
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-j")){
-      //kryptoanaliza z tekstem jawnym afinicznym
+      affineDecryptHelp();
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-k")){
       //kryptoanaliza w oparciu o kryptogram aficzninym
