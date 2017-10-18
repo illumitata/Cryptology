@@ -13,4 +13,10 @@ char* readFile(char *filename);
 
 void saveFile(char *filename, char *result);
 
+int gcd(int a, int b);
+
+int oppositeModulo(int a, int b);
+
+int checkConditions(int a, int b);
+
 #endif
