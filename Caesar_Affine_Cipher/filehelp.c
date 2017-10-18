@@ -51,10 +51,8 @@ int oppositeModulo(int a, int b){
 }
 
 //Checking conditions for affine key
-int checkConditions(int a){
-
-  if((gcd(a, ALPHABET) != 1) || ((a*(oppositeModulo(a, ALPHABET))%ALPHABET)!=1)) \
-  return 1;
+int checkConditions(int a, int b){
+  if((gcd(a, b) != 1) || ((a*(oppositeModulo(a, b))%b)!=1)) return 1;
   else return 0;
 }
 
@@ -76,7 +74,7 @@ int readKey(char *filename, short int position){
       return k;
       break;
     case 2:
-      if(checkConditions(a)) printf("Wrong 'a' key!\n");
+      if(checkConditions(a, ALPHABET)) printf("Wrong 'a' key!\n");
       if(b>25 || b<1) printf("Wrong 'b' key!\n");
       return a;
       break;

@@ -14,6 +14,6 @@ void affineDecrypt();
 
 void affineDecryptHelp();
 
-//void affineDecryptBreak();
+void affineDecryptBreak();
 
 #endif

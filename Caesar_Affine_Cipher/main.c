@@ -28,15 +28,19 @@ int main (int argc, char **argv){
     //Affine section
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-e")){
       affineEncrypt();
+      printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-d")){
       affineDecrypt();
+      printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-j")){
       affineDecryptHelp();
+      printf("Check decrypt.txt for text.\n");
     }
     if(!strcmp(argv[1], "-a") && !strcmp(argv[2], "-k")){
-      //kryptoanaliza w oparciu o kryptogram aficzninym
+      affineDecryptBreak();
+      printf("Check decrypt.txt for text.\n");
     }
   }
   else printf("You entered incorrect options! \n");
