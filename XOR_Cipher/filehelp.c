@@ -52,6 +52,20 @@ void saveFile(char *filename, char *result){
   return;
 }
 
+//Special binary mode for this one, 'cause special characters happens
+void saveFileBinary(char *filename, char *result, int sizeInput){
+
+  FILE *fpo;
+
+  fpo = fopen(filename,"wb+");
+
+  fwrite(result, sizeof(char), sizeInput, fpo);
+
+  fclose(fpo);
+
+  return;
+}
+
 //Reading file which is binary
 char* readFileBinary(char *name){
 

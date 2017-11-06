@@ -10,7 +10,7 @@
 
 int main (int argc, char **argv){
 
-  if(!strcmp(argv[1], "-p") || !strcmp(argv[1], "-e") || !strcmp(argv[1], "-k")){
+  if(!strcmp(argv[1], "-p") || !strcmp(argv[1], "-e") || !strcmp(argv[1], "-k") || !strcmp(argv[1], "-s") || !strcmp(argv[1], "-a")){
     if(!strcmp(argv[1], "-p")){
       xorPrepareText();
       printf(GREEN "Text ready for action.\n" RESET);
@@ -21,6 +21,14 @@ int main (int argc, char **argv){
     }
     if(!strcmp(argv[1], "-k")){
       xorDecryptBreak();
+      printf(GREEN "Text decrypted in decrypt.txt file.\n" RESET);
+    }
+    if(!strcmp(argv[1], "-a")){
+      xorDecryptProb();
+      printf(GREEN "Text decrypted in decrypt.txt file.\n" RESET);
+    }
+    if(!strcmp(argv[1], "-s")){
+      xorDecryptSimple();
       printf(GREEN "Text decrypted in decrypt.txt file.\n" RESET);
     }
   }

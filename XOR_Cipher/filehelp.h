@@ -15,4 +15,6 @@ char* readFileBinary(char *name);
 
 int readFileBinarySize(char *name);
 
+void saveFileBinary(char *filename, char *result, int sizeInput);
+
 #endif
